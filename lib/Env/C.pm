@@ -1,24 +1,32 @@
 package Env::C;
+BEGIN {
+  $Env::C::VERSION = '0.09';
+}
+
+# ABSTRACT: Get/Set/Unset Environment Variables on the C level
 
 require 5.005;
 
 use strict;
-#use warnings;
 
 require DynaLoader;
+
 @Env::C::ISA = qw(DynaLoader);
-$Env::C::VERSION = '0.08';
 
 bootstrap Env::C $Env::C::VERSION;
 
 1;
-__END__
+
+
+=pod
 
 =head1 NAME
 
 Env::C - Get/Set/Unset Environment Variables on the C level
 
+=head1 VERSION
 
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -35,8 +43,6 @@ Env::C - Get/Set/Unset Environment Variables on the C level
   my $ar_env = Env::C::getallenv();
   print join "\n", @$ar_env;
 
-
-
 =head1 DESCRIPTION
 
 This module provides a Perl API for getenv(3), setenv(3) and
@@ -48,56 +54,37 @@ Perl and the glue code doesn't worry to set them on the C level, these
 variables might not be seen by the C level. This module shows what
 really the C level sees.
 
+=head1 FUNCTIONS
 
-
-
-=head2 FUNCTIONS
-
-=over
-
-=item * getenv()
-
-  $val = Env::C::getenv($key);
+=head2 getenv($key)
 
 Returns the value of the environment variable matching the key or
 C<undef>.
 
-=item * setenv()
+=head2 setenv($key, $value, [$override])
 
-  Env::C::setenv($key, $value, [$override]);
+The C<setenv()> function adds the variable C<$key> to the environment with the
+value C<$value>, if C<$key> does not already exist.  If C<$key> does exist in
+the environment, then its value is changed to C<$value> if C<$override> is
+non-zero; if C<$override> is zero or is not passed, then the value of C<$key>
+is not changed.
 
-The setenv() function adds the variable C<$key> to the environment
-with the value C<$value>, if C<$key> does not already exist.  If
-C<$key> does exist in the environment, then its value is changed to
-C<$value> if C<$override> is non-zero; if C<$override> is zero or is
-not passed, then the value of C<$key> is not changed.
-
-=item * unsetenv()
-
-  Env::C::unsetenv($key);
+=head2 unsetenv($key)
 
 The unsetenv() function deletes the variable C<$key> from the
 environment.
 
-=item * getallenv()
+=head2 getallenv()
 
   my $ar_env = Env::C::getallenv();
   print join "\n", @$ar_env;
 
-The getallenv() function returns an array reference which includes all
+The C<getallenv()> function returns an array reference which includes all
 the environment variables.
-
-=back
-
-
-
 
 =head2 EXPORT
 
 None.
-
-
-
 
 =head1 Thread-safety and Thread-locality
 
@@ -119,24 +106,38 @@ If you need to modify the C level of C<%ENV> for all threads to see,
 do that before threads are started. (e.g. for mod_perl 2.0, at the
 server startup).
 
+=head1 HISTORY
 
+=over 4
 
+=item * Versions 0.01 through 0.08 written and maintained by
+Stas Bekman E<lt>stas@stason.orgE<gt>
+
+=back
+
+=head1 SOURCE
+
+The development version is on github at L<http://github.com/mschout/env-c>
+and may be cloned from L<git://github.com/mschout/env-c.git>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to bug-env-c@rt.cpan.org or through the web interface at:
+ http://rt.cpan.org/Public/Dist/Display.html?Name=Env-C
 
 =head1 AUTHOR
 
-Stas Bekman E<lt>stas@stason.orgE<gt>
+Michael Schout <mschout@cpan.org>
 
+=head1 COPYRIGHT AND LICENSE
 
+This software is copyright (c) 2002 by Michael Schout.
 
-=head1 COPYRIGHT
-
-This is a free software; you can redistribute it and/or modify it
-under the terms of the Artistic License.
-
-
-
-=head1 SEE ALSO
-
-L<perl>.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+

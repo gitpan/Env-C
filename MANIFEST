@@ -1,9 +1,14 @@
-ppport.h
-C.pm
 C.xs
 Changes
-Makefile.PL
+LICENSE
 MANIFEST
+META.yml
+Makefile.PL
 README
-test.pl
-META.yml                                 Module meta-data (added by MakeMaker)
+SIGNATURE
+dist.ini
+lib/Env/C.pm
+ppport.h
+t/release-pod-coverage.t
+t/release-pod-syntax.t
+t/smoke.t
