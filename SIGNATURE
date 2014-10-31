@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,26 +14,26 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 f98ecbdd9c8fc5058da3dbbfbc1e21b27238a57a C.xs
-SHA1 f271aab92ce330ebceceeffafd95ebbab7269a30 Changes
-SHA1 8fafcc8afa82651d046a096e72183f034fc611db LICENSE
-SHA1 41922402b59b89153859655d8131013d6eb562e2 MANIFEST
-SHA1 5e8cf4f7c877a1c63dcbc8ba47273989f4c661b4 MANIFEST.SKIP
-SHA1 079f003e737a60d4ca9644a8813f0997d136a471 META.yml
-SHA1 1c741af54ea8a3f194b37b1b5da408be48d949c7 Makefile.PL
-SHA1 07ae68a4aa292b68a9bd78d3e3197860fb35c251 README
-SHA1 74d2ab99a5e85b19b1449639dc2f49a5472ddd88 lib/Env/C.pm
-SHA1 b27c881645d71eb624eee3f6b832a57644817763 ppport.h
-SHA1 3e38c0a1f5292fbac512df16e1e4485f2b64a64d t/leak.t
-SHA1 9433c240fe590bc404ab68ff63984df763e347ed t/release-pod-coverage.t
-SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
+SHA1 7a975b6749b9afd86b2c799594b2d8b7204f9f13 C.xs
+SHA1 0d38a6c0735d9ca8b72debe03066bb419715358f Changes
+SHA1 5c75bf9f6320be4f563a84f7ba395ae883aa25ab LICENSE
+SHA1 04a9ad5cb882a0a122a57bc0db3ff03cd91edd92 MANIFEST
+SHA1 e981ea520beb6f1618e59ae3f8dc90ebe0cecff2 MANIFEST.SKIP
+SHA1 67fc152d7d79562287fc5d1a425043f29d5ffff7 META.yml
+SHA1 3d2b565bfd29377d6968d7a161eae46569c832cf Makefile.PL
+SHA1 bfc5f81e1032f8b98ef1b568826831b8a2a31e45 README
+SHA1 5313d0ea1eeebf9b17e70cca40349fdb5e1f8d87 lib/Env/C.pm
+SHA1 e2965242503050c505bb13de53735a4f2cc8b06a ppport.h
+SHA1 c0eeac68a11a16b7c932c91ea5ebd2b696c86593 t/leak.t
+SHA1 5cf386f49901e8ccaad5ab271036754d67114081 t/release-pod-coverage.t
+SHA1 dc3eefcab3399f9a70861c332bb4a81ddcbb45e4 t/release-pod-syntax.t
 SHA1 61cea839dd94aaaeb301ccac9b83cde4c5c91b42 t/signature.t
 SHA1 056619e1a87112834a2455570acaaa09fdd4d6c7 t/smoke.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
 Comment: GPGTools - http://gpgtools.org
 
-iEYEARECAAYFAlFkTPgACgkQ+CqvSzp9LOyctQCfdwwqDPT0kjjELDBNPItWTDm0
-bjsAnAuJimMc0buHHzdCnBIFC1jzDe32
-=FwHp
+iEYEARECAAYFAlRT06cACgkQ+CqvSzp9LOzC7wCeM8oGsg1KuAMq6b8AJ0wGaop/
+Jm4AnRfNJOvvslEsVccDH8tCXbhv9AmC
+=LtK9
 -----END PGP SIGNATURE-----
